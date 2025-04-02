@@ -10,11 +10,9 @@ return {
     lazy = false,
     branch = "regexp",
     config = function()
-      require("venv-selector").setup()
+      require("venv-selector").setup({
+        poetry_path = "/home/viktor/.cache/pypoetry",
+      })
     end,
-    keys = {
-      { "<leader>vs", "<cmd>VenvSelect<cr>" },
-      { "<leader>vc", "<cmd>VenvSelectCached<cr>" },
-    },
   },
 }

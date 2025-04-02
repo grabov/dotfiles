@@ -9,3 +9,5 @@ vim.g.lazyvim_python_lsp = "pyright"
 vim.g.lazyvim_python_ruff = "ruff"
 
 vim.opt.commentstring = "# %s"
+vim.opt.spelllang = "ru,en"
+vim.opt.rtp:append(vim.fn.stdpath("data") .. "/site")
