@@ -1,0 +1,128 @@
+/*
+
+██╗    ██╗ █████╗ ██╗   ██╗██████╗  █████╗ ██████╗ 
+██║    ██║██╔══██╗╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗
+██║ █╗ ██║███████║ ╚████╔╝ ██████╔╝███████║██████╔╝
+██║███╗██║██╔══██║  ╚██╔╝  ██╔══██╗██╔══██║██╔══██╗
+╚███╔███╔╝██║  ██║   ██║   ██████╔╝██║  ██║██║  ██║
+ ╚══╝╚══╝ ╚═╝  ╚═╝   ╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
+
+Waybar Config File by Arfan Zubi
+
+*/
+
+@import url("./mocha.css");
+
+* {
+    font-family: "JetBrainsMono Nerd Font";
+    font-weight: bold;
+    font-size: 15px;
+    min-height: 0;
+}
+
+window#waybar {
+    color: @text;
+    background: @mantle;
+}
+
+#workspaces,
+#workspaces button,
+#workspaces button.active,
+#workspaces button:hover {
+    border-radius: 1.5rem;
+}
+
+#workspaces {
+    margin: 5px 0 5px 1rem;
+    background-color: rgba(54, 58, 79, 0.5);
+}
+
+#workspaces button {
+    padding: 0.5rem;
+    color: @text;
+}
+
+#workspaces button.active {
+    color: @mauve;
+}
+
+#workspaces button:hover {
+    color: @lavender;
+    background: @surface1;
+    border-color: @surface0;
+}
+
+#workspaces button.urgent {
+    color: @red;
+}
+
+#clock,
+#pulseaudio,
+#backlight,
+#battery,
+#language,
+#custom-lock,
+#custom-power,
+#custom-wireguard {
+    margin: 5px 0;
+    padding: 0.5rem 1rem;
+    background-color: rgba(54, 58, 79, 0.5);
+}
+
+#window {
+    margin: 5px 0;
+    padding: 0.5rem 1rem;
+    color: @blue;
+}
+
+/* make window module transparent when no windows present */
+window#waybar.empty #window {
+    background-color: transparent;
+}
+
+#clock {
+    color: @mauve;
+    border-radius: 1.5rem;
+}
+
+#battery,
+#battery.charging {
+    color: @green;
+}
+
+#battery.warning:not(.charging) {
+    color: @red;
+}
+
+#pulseaudio {
+    margin-left: 1rem;
+    color: @maroon;
+    border-radius: 1.5rem 0 0 1.5rem;
+}
+
+#backlight {
+    color: @yellow;
+}
+
+#language {
+    color: @lavender;
+}
+
+#custom-wireguard {
+  background-color: transparent;
+  color: @lavender;
+}
+
+#custom-wireguard.connected {
+  color: @green;
+}
+
+#custom-wireguard.disconnected {
+  color: @maroon;
+}
+
+#custom-power {
+    margin-right: 1rem;
+    color: @red;
+    border-radius: 0 1.5rem 1.5rem 0;
+}
