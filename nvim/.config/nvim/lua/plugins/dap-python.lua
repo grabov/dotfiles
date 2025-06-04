@@ -1,7 +1,7 @@
 return {
   "mfussenegger/nvim-dap-python",
   config = function()
-    require("dap-python").setup() -- "/home/viktor/.asdf/shims/debugpy")
+    require("dap-python").setup("uv")
     require("dap").configurations.python = {
       {
         type = "python",
