@@ -18,6 +18,7 @@
     "clock"
   ],
   "modules-right": [
+    "tray",
     "custom/wireguard",
     "pulseaudio",
     "backlight",
@@ -115,5 +116,13 @@
     "on-click": "~/.config/waybar/wireguard/wg-manager.sh -t && pkill -SIGRTMIN+1 waybar",
     "return-type": "json",
     "signal": 1
+  },
+  "tray": {
+    "icon-size": 21,
+    "spacing": 10,
+    "icons": {
+      "blueman": "bluetooth",
+      "TelegramDesktop": "$HOME/.local/share/icons/hicolor/16x16/apps/telegram.png"
+    }
   }
 }
