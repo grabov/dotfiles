@@ -17,8 +17,6 @@ source $ZSH/oh-my-zsh.sh
 export EDITOR="nvim"
 export SUDO_EDITOR="$EDITOR"
 
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
 export PATH="$PATH:$HOME/.local/bin"
 if [ -f "$HOME/yandex-cloud/path.bash.inc" ]; then source "$HOME/yandex-cloud/path.bash.inc"; fi
 if [ -f "$HOME/yandex-cloud/completion.zsh.inc" ]; then source "$HOME/yandex-cloud/completion.zsh.inc"; fi
