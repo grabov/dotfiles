@@ -5,7 +5,8 @@ return {
       sections = {
         {
           section = "terminal",
-          cmd = "chafa ~/.config/nvim/assets/banner.png --format symbols --symbols vhalf --size 60x12 --stretch; sleep .1",
+          -- cmd = "chafa ~/.config/nvim/assets/banner.png --format symbols --symbols vhalf --size 60x12 --stretch; sleep .1",
+          cmd = "chafa ~/.config/nvim/assets/banner.png --format symbols --size 60; sleep .1",
           height = 15,
           padding = 1,
         },
