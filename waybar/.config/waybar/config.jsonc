@@ -18,6 +18,7 @@
     "clock"
   ],
   "modules-right": [
+    "custom/pomodoro",
     "tray",
     "custom/wireguard",
     "pulseaudio",
@@ -116,6 +117,14 @@
     "on-click": "~/.config/waybar/wireguard/wg-manager.sh -t && pkill -SIGRTMIN+1 waybar",
     "return-type": "json",
     "signal": 1
+  },
+  "custom/pomodoro": {
+    "exec": "~/.config/waybar/pomodoro/pomodoro.sh status",
+    "return-type": "json",
+    "interval": 1,
+    "on-click": "~/.config/waybar/pomodoro/pomodoro.sh toggle",
+    "on-click-right": "~/.config/waybar/pomodoro/pomodoro.sh skip",
+    "on-click-middle": "~/.config/waybar/pomodoro/pomodoro.sh reset"
   },
   "tray": {
     "icon-size": 21,

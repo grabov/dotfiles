@@ -121,6 +121,32 @@ window#waybar.empty #window {
   color: @maroon;
 }
 
+#custom-pomodoro {
+    margin: 5px 0;
+    padding: 0.5rem 1rem;
+    background-color: rgba(54, 58, 79, 0.5);
+    color: @overlay0;
+    border-radius: 1.5rem;
+    margin-right: 0.5rem;
+}
+
+#custom-pomodoro.focus {
+    color: @mauve;
+}
+
+#custom-pomodoro.short,
+#custom-pomodoro.long {
+    color: @green;
+}
+
+#custom-pomodoro.paused {
+    color: @overlay1;
+}
+
+#custom-pomodoro.idle {
+    color: @overlay0;
+}
+
 #custom-power {
     margin-right: 1rem;
     color: @red;
