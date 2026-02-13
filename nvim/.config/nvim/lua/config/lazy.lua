@@ -35,7 +35,7 @@ require("lazy").setup({
     { import = "lazyvim.plugins.extras.formatting.prettier" },
     { import = "lazyvim.plugins.extras.coding.blink" },
     { import = "lazyvim.plugins.extras.editor.refactoring" },
-    { import = "lazyvim.plugins.extras.ai.avante" },
+    -- { import = "lazyvim.plugins.extras.ai.avante" },
 
     -- import/override with your plugins
     { import = "plugins" },
