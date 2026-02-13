@@ -17,9 +17,11 @@ fpath=(${ASDF_DATA_DIR:-$HOME/.asdf}/completions $fpath)
 export EDITOR="nvim"
 export SUDO_EDITOR="$EDITOR"
 
+# Aliases
+alias task='go-task'
+
 export PATH="$PATH:$HOME/.local/bin"
 if [ -f "$HOME/yandex-cloud/path.bash.inc" ]; then source "$HOME/yandex-cloud/path.bash.inc"; fi
 if [ -f "$HOME/yandex-cloud/completion.zsh.inc" ]; then source "$HOME/yandex-cloud/completion.zsh.inc"; fi
 
 autoload -Uz compinit && compinit
-
