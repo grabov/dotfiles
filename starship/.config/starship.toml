@@ -1,5 +1,8 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
+# Default is 500ms; first launch of node/python after brew upgrade or reboot takes 1-2s
+command_timeout = 2000
+
 format = """
 [](surface0)\
 $os\
