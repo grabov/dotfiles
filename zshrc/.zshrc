@@ -11,6 +11,12 @@ plugins=(git starship docker docker-compose fzf kitty poetry)
 # Extra completions must be on fpath before oh-my-zsh runs compinit.
 [[ -d "$HOME/.docker/completions" ]] && fpath=("$HOME/.docker/completions" $fpath)
 
+# asdf (pacman on Arch): shims on PATH, completions on fpath. mise is handled below.
+if command -v asdf >/dev/null 2>&1; then
+  export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
+  fpath=("${ASDF_DATA_DIR:-$HOME/.asdf}/completions" $fpath)
+fi
+
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -29,7 +35,8 @@ export EDITOR="nvim"
 export SUDO_EDITOR="$EDITOR"
 
 # Aliases
-# alias task='go-task'
+# Arch packages the binary as go-task, Homebrew as task.
+command -v go-task >/dev/null 2>&1 && alias task='go-task'
 
 export PATH="$PATH:$HOME/.local/bin"
 if [ -f "$HOME/yandex-cloud/path.bash.inc" ]; then source "$HOME/yandex-cloud/path.bash.inc"; fi
